@@ -1,0 +1,58 @@
+{
+  "caseVersion": "0.6.2",
+  "snapshotDate": "2026-11-03",
+  "sourceCommit": "21082f52745d24b218b346cba4f9824221c36bdf",
+  "sourceBranch": "v3_release_experiment",
+  "files": [
+    {
+      "file": "build_model.py",
+      "source": "frontend/tools/modeling/ring-pulsating-deduster/build_model.py",
+      "sha256": "660de0d8ef490ae081c1d311a3948a97b2be320ac06d80a299fdc64d1c8bfe2d"
+    },
+    {
+      "file": "geometry.py",
+      "source": "frontend/tools/modeling/ring-pulsating-deduster/geometry.py",
+      "sha256": "fa99331d9a977d87c564da77969e6fb72bf8d9a8f70b4962ebe78b5f2aba9114"
+    },
+    {
+      "file": "shading.py",
+      "source": "frontend/tools/modeling/ring-pulsating-deduster/shading.py",
+      "sha256": "3b24c26fc4c0c6ef0196d0145ca4144a69802dda32d250f8799d9d6191d95c72"
+    },
+    {
+      "file": "parameters.json",
+      "source": "frontend/tools/modeling/ring-pulsating-deduster/parameters.json",
+      "sha256": "dc808c5fb893c02be52b7f4cbdf7be46ec044b2dd21666952d75f5518451442d"
+    },
+    {
+      "file": "reference-correspondence.json",
+      "source": "frontend/tools/modeling/ring-pulsating-deduster/reference-correspondence.json",
+      "sha256": "1ba7bc95d0598649e1d9dc66f1beea57bd537920a1de01fde69263e8a3d10e5c"
+    },
+    {
+      "file": "accepted-model.json",
+      "source": "frontend/src/views/dataCenter/nan3D/EveryModel/RingPulsatingDeduster/model.json",
+      "sha256": "6cf14fa34a56a917c81ce24acc2c401386477b11473e284283fbeceb20695764"
+    },
+    {
+      "file": "accepted-sensors.json",
+      "source": "frontend/tools/modeling/ring-pulsating-deduster/sensors.json",
+      "sha256": "5304d6b2b9b8a017ffd19a3a8e29a5d1d3e1161f515b6ad1ae3c220001014913"
+    }
+  ],
+  "baselineAsset": {
+    "source": "frontend/public/models/ring-pulsating-deduster/ring-pulsating-deduster.glb",
+    "sha256": "626735207193f54c8fdbaa905e73616f545cfca7640e1a0a6d00e97114cc1399",
+    "bytes": 6280620,
+    "meshCount": 33,
+    "triangles": 90268
+  },
+  "scope": "Accepted display-model source snapshot; no original photographs, GLB, Blender binary or production sensor IDs included.",
+  "limits": [
+    "Photo-proportional display dimensions, not measured engineering dimensions.",
+    "The accepted 05/06 display positions do not establish field sensor identities or shaft pairing.",
+    "The generated motion/running metadata is not the frontend monitoring runtime.",
+    "This recipe reproduces this accepted device; another device requires its own photo analysis and geometry."
+  ],
+  "hashNormalization": "utf8-lf"
+}

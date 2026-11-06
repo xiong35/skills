@@ -1,0 +1,73 @@
+{
+  "required_nodes": [
+    "MachineRoot",
+    "Motor",
+    "Gearbox",
+    "PumpHousing",
+    "DriveBelt",
+    "PulleyMotor",
+    "PulleyGearbox",
+    "BeltGuard",
+    "BeltGuardFrame",
+    "BeltGuardMesh",
+    "MotorCanopy",
+    "FrontCastShoulders",
+    "GearboxMotorSideFlange",
+    "RearCircularHousing",
+    "OutputCoupling",
+    "BaseFrame",
+    "GearboxCover_1",
+    "GearboxCover_2",
+    "GearboxCover_3"
+  ],
+  "anchors": [
+    "Anchor_motor_de",
+    "Anchor_motor_nde",
+    "Anchor_gearbox_shaft_1_a",
+    "Anchor_gearbox_shaft_1_b",
+    "Anchor_gearbox_shaft_2_a",
+    "Anchor_gearbox_shaft_2_b",
+    "Anchor_gearbox_shaft_3_a",
+    "Anchor_gearbox_shaft_3_b",
+    "Anchor_pump_housing"
+  ],
+  "min_triangles": 1,
+  "max_triangles": 100000,
+  "materials": {
+    "motor": {
+      "baseColorSRGB": "#18fefe",
+      "metallicFactor": 0.7,
+      "roughnessFactor": 0.4
+    },
+    "housing": {
+      "baseColorSRGB": "#18fefe",
+      "metallicFactor": 0.7,
+      "roughnessFactor": 0.4
+    },
+    "pump": {
+      "baseColorSRGB": "#18fefe",
+      "metallicFactor": 0.7,
+      "roughnessFactor": 0.4
+    },
+    "steel": {
+      "baseColorSRGB": "#c9c8ca",
+      "metallicFactor": 0.7,
+      "roughnessFactor": 0.5
+    },
+    "wheel": {
+      "baseColorSRGB": "#c9c8ca",
+      "metallicFactor": 0.7,
+      "roughnessFactor": 0.5
+    }
+  },
+  "independent_paint_groups": [
+    "Motor",
+    "Gearbox",
+    "PumpHousing"
+  ],
+  "allowed_shared_materials": [
+    "steel",
+    "wheel",
+    "recess"
+  ]
+}

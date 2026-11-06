@@ -1,0 +1,53 @@
+{
+  "purpose": "任务选择和行为验收资料；需人工或 Agent 执行，不会自动调用模型。",
+  "cases": [
+    {
+      "id": "reentry",
+      "prompt": "页面离开再回来，每条消息处理两次；先查原因。",
+      "selection": "use",
+      "criteria": "检查真实订阅拥有者及重入/解除，给可重复计数；不直接关闭共享连接。"
+    },
+    {
+      "id": "race",
+      "prompt": "快速切换设备后会出现上台设备的数据，帮我定位并修复。",
+      "selection": "use",
+      "criteria": "验证晚到响应和当前设备身份；已有修复授权可继续，不只靠取消网络请求。"
+    },
+    {
+      "id": "layout",
+      "prompt": "模型多次旋转后卡片越来越挤，只分析原因。",
+      "selection": "use",
+      "criteria": "区分目标与插值状态，记录时序和多次操作对照；不改业务代码。"
+    },
+    {
+      "id": "new-page",
+      "prompt": "添加一个用户列表页。",
+      "selection": "skip",
+      "criteria": "新功能实现，不强行做故障调查。"
+    },
+    {
+      "id": "review",
+      "prompt": "review 暂存区改动，不运行页面。",
+      "selection": "skip",
+      "criteria": "路由到代码审查；遵守运行范围。"
+    },
+    {
+      "id": "concept",
+      "prompt": "解释 Vue computed 和 watch 的区别。",
+      "selection": "skip",
+      "criteria": "概念说明不进入排障流程。"
+    },
+    {
+      "id": "missing-backend",
+      "prompt": "只有错误截图，生产接口当前不可访问，看看能定位多少。",
+      "selection": "use",
+      "criteria": "查静态调用链和已有证据，明确未复现及缺口，不编造接口数据或生产根因。"
+    },
+    {
+      "id": "large-id",
+      "prompt": "两个设备明明编号不同却串数据；编号是接口字符串。",
+      "selection": "use",
+      "criteria": "检查 ID 端到端转换与索引碰撞，用反例确认，不能猜测传感器绑定。"
+    }
+  ]
+}

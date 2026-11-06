@@ -1,0 +1,71 @@
+{
+  "purpose": "任务选择和行为验收资料；需人工或 Agent 执行，不会自动调用模型。",
+  "cases": [
+    {
+      "id": "staged",
+      "prompt": "只 review 暂存区，工作区还有我未提交的新文件。",
+      "selection": "use",
+      "criteria": "固定索引基线；区分未暂存/未跟踪相关上下文，不把其差异冒充暂存变更。"
+    },
+    {
+      "id": "component",
+      "prompt": "审查这个公共卡片改动会不会影响其他型号。",
+      "selection": "use",
+      "criteria": "沿真实消费者和 props/events 验证回归，检查交互而非只比截图。"
+    },
+    {
+      "id": "audit",
+      "prompt": "对设备详情调用链做一次现状审计。",
+      "selection": "use",
+      "criteria": "允许报告存量缺陷，区分静态证据与未运行路径。"
+    },
+    {
+      "id": "feature",
+      "prompt": "实现列表搜索和分页。",
+      "selection": "skip",
+      "criteria": "不把实现自动变成只读审查。"
+    },
+    {
+      "id": "reproduce",
+      "prompt": "滚动后偶尔白屏，帮我复现定位。",
+      "selection": "skip",
+      "criteria": "以实际异常复现为主，应走故障调查。"
+    },
+    {
+      "id": "format",
+      "prompt": "只统一文件缩进。",
+      "selection": "skip",
+      "criteria": "格式整理不输出功能缺陷审查。"
+    },
+    {
+      "id": "auto-import",
+      "prompt": "检查 Vue 文件没 import ref 是不是 Bug；项目有自动导入。",
+      "selection": "use",
+      "criteria": "核对配置和实际作用范围，不能直接报告未定义。"
+    },
+    {
+      "id": "no-baseline",
+      "prompt": "审查一下，没有说是提交还是工作区，仓库两者都有改动。",
+      "selection": "use",
+      "criteria": "先读上下文；基线仍有实质歧义时询问，不假定远程主干。"
+    },
+    {
+      "id": "existing-capability",
+      "prompt": "review 新增页面：它重新实现了分页、字典和下载方法，项目有相同用途的现成能力。先查是不是重复，不修改代码。",
+      "selection": "use",
+      "criteria": "读取现成实现及真实消费者，比较契约并给出可定位的替代依据；遵循项目复用要求。只有维护影响的建议与功能缺陷分开，不能虚构运行错误。"
+    },
+    {
+      "id": "justified-adapter",
+      "prompt": "审查新卡片和旧卡片是否应该合并。新卡片要区分未测量与实测零，旧卡片把缺失值显示为零；用户只授权本型号改动。",
+      "selection": "use",
+      "criteria": "核对真实上游数据、两种空态及调用者，保留必要适配；不能仅凭样式相似要求合并，也不能擅自迁移其他型号。"
+    },
+    {
+      "id": "normalized-fallback",
+      "prompt": "review：数据层已保证数值格式，页面又加了一组默认值和格式转换，看看是否需要。",
+      "selection": "use",
+      "criteria": "沿所有可达调用路径确认归一化前提及有效零值，识别确实多余的分支；未经过该适配层或存在不同业务契约时，不以统一简化为由删除必要检查。"
+    }
+  ]
+}

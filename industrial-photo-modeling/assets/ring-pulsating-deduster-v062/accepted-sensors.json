@@ -1,0 +1,169 @@
+{
+  "schemaVersion": 1,
+  "asset": "ring-pulsating-deduster.glb",
+  "unit": "proportional display units, not measured metres or millimetres",
+  "sensors": [
+    {
+      "id": "motor_de",
+      "name": "Anchor_motor_de",
+      "label": "电机输出端",
+      "owner": "Motor",
+      "localPositionBlender": [
+        0.82,
+        -0.75,
+        0.68
+      ],
+      "positionGLTF": [
+        0.82,
+        0.68,
+        0.75
+      ],
+      "positionSource": "photo-proportional",
+      "description": "依据电机两端轴承关系建立的比例节点，非实测安装坐标。"
+    },
+    {
+      "id": "motor_nde",
+      "name": "Anchor_motor_nde",
+      "label": "电机非输出端",
+      "owner": "Motor",
+      "localPositionBlender": [
+        0.82,
+        1.35,
+        0.68
+      ],
+      "positionGLTF": [
+        0.82,
+        0.68,
+        -1.35
+      ],
+      "positionSource": "photo-proportional",
+      "description": "依据电机两端轴承关系建立的比例节点，非实测安装坐标。"
+    },
+    {
+      "id": "gearbox_shaft_1_a",
+      "name": "Anchor_gearbox_shaft_1_a",
+      "label": "减速机输入轴皮带侧",
+      "owner": "Gearbox",
+      "localPositionBlender": [
+        5.72,
+        -0.77,
+        1.2
+      ],
+      "positionGLTF": [
+        5.72,
+        1.2,
+        0.77
+      ],
+      "positionSource": "opposite-end-inferred",
+      "description": "前后成对归属同一轴；位置按照片比例估计，背侧使用同构封闭圆盖。"
+    },
+    {
+      "id": "gearbox_shaft_1_b",
+      "name": "Anchor_gearbox_shaft_1_b",
+      "label": "减速机输入轴背侧",
+      "owner": "Gearbox",
+      "localPositionBlender": [
+        5.72,
+        1.3800000000000001,
+        1.2
+      ],
+      "positionGLTF": [
+        5.72,
+        1.2,
+        -1.3800000000000001
+      ],
+      "positionSource": "rear-cover-photo",
+      "description": "前后成对归属同一轴；位置按照片比例估计，背侧使用同构封闭圆盖。"
+    },
+    {
+      "id": "gearbox_shaft_2_a",
+      "name": "Anchor_gearbox_shaft_2_a",
+      "label": "减速机中间轴皮带侧",
+      "owner": "Gearbox",
+      "localPositionBlender": [
+        4.55,
+        -0.895,
+        1.14
+      ],
+      "positionGLTF": [
+        4.55,
+        1.14,
+        0.895
+      ],
+      "positionSource": "front-auxiliary-seat-photo",
+      "description": "05按照片移至大带轮左侧圆座；05与06配对及中间轴命名待核准，不能视为已确认共轴。"
+    },
+    {
+      "id": "gearbox_shaft_2_b",
+      "name": "Anchor_gearbox_shaft_2_b",
+      "label": "减速机中间轴背侧",
+      "owner": "Gearbox",
+      "localPositionBlender": [
+        6.95,
+        1.3800000000000001,
+        1.13
+      ],
+      "positionGLTF": [
+        6.95,
+        1.13,
+        -1.3800000000000001
+      ],
+      "positionSource": "rear-cover-photo",
+      "description": "05按照片移至大带轮左侧圆座；05与06配对及中间轴命名待核准，不能视为已确认共轴。"
+    },
+    {
+      "id": "gearbox_shaft_3_a",
+      "name": "Anchor_gearbox_shaft_3_a",
+      "label": "减速机输出轴皮带侧",
+      "owner": "Gearbox",
+      "localPositionBlender": [
+        8.1,
+        -0.77,
+        1.08
+      ],
+      "positionGLTF": [
+        8.1,
+        1.08,
+        0.77
+      ],
+      "positionSource": "opposite-end-inferred",
+      "description": "前后成对归属同一轴；位置按照片比例估计，背侧使用同构封闭圆盖。"
+    },
+    {
+      "id": "gearbox_shaft_3_b",
+      "name": "Anchor_gearbox_shaft_3_b",
+      "label": "减速机输出轴背侧",
+      "owner": "Gearbox",
+      "localPositionBlender": [
+        8.1,
+        1.3800000000000001,
+        1.08
+      ],
+      "positionGLTF": [
+        8.1,
+        1.08,
+        -1.3800000000000001
+      ],
+      "positionSource": "rear-cover-photo",
+      "description": "前后成对归属同一轴；位置按照片比例估计，背侧使用同构封闭圆盖。"
+    },
+    {
+      "id": "pump_housing",
+      "name": "Anchor_pump_housing",
+      "label": "泵头壳体",
+      "owner": "PumpHousing",
+      "localPositionBlender": [
+        10.1,
+        0.91,
+        1.7200000000000002
+      ],
+      "positionGLTF": [
+        10.1,
+        1.7200000000000002,
+        -0.91
+      ],
+      "positionSource": "location-unconfirmed",
+      "description": "按实拍补建大圆形壳体后的表面示意节点；传感器实际安装位置仍待现场核对。"
+    }
+  ]
+}

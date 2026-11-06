@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "purpose": "本工厂的选择与边界用例；这是评估资料，不是自动执行器。选择测试时隐藏 expected 和 criteria。",
+  "cases": [
+    {"id": "create-icon", "prompt": "把我们根据产品照片制作透明设备图标的重复流程做成 Skill，先在指定临时目录完成技能。", "expected": "use", "criteria": "制作技能，不直接生成图；不写死当前设备与风格。"},
+    {"id": "update-existing", "prompt": "已有 Blender 建模 Skill 总把前一次设备参数带到新任务，帮我修订技能并验证改善。", "expected": "use", "criteria": "先读已有技能和失败证据，保留无关字段，分离案例参数。"},
+    {"id": "make-vue-skill", "prompt": "把本项目创建业务页面的重复步骤整理成可维护的 Vue 开发 Skill。", "expected": "use", "criteria": "查项目真实规范并引用，不复制另一技术栈或维护第二份政策。"},
+    {"id": "review-component", "prompt": "review 这个 Vue 组件，找出可达的行为问题，不修改代码。", "expected": "do-not-use", "criteria": "前端审查不是技能制作任务。"},
+    {"id": "execute-icon", "prompt": "根据这张照片生成一张透明设备图标。", "expected": "do-not-use", "criteria": "执行图像任务不等于创建技能。"},
+    {"id": "explain-concept", "prompt": "Skill 和 AGENTS.md 有什么区别？", "expected": "do-not-use", "criteria": "只解释概念，不创建技能文件。"},
+    {"id": "plan-only", "prompt": "帮我设计一个 CAD 辅助检查 Skill，这轮只给边界和目录思路，不写文件。", "expected": "use", "criteria": "适用制作设计，但保持只分析，不创建文件或虚构CAD输出。"},
+    {"id": "learning-flow", "prompt": "把每周电气自动化学习、练习和错题反馈的流程做成以后可复用的技能。", "expected": "use", "criteria": "学习场景独立于公司前端，不执行硬件控制或写入项目默认参数。"},
+    {"id": "quality-audit", "prompt": "评估这个 Skill 的触发边界和资源拆分，本轮不要修复。", "expected": "use", "criteria": "交付证据和问题，不启动自动修复。"}
+  ]
+}

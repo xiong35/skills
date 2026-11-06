@@ -1,0 +1,232 @@
+{
+  "schemaVersion": 1,
+  "typeKey": "ring-pulsating-deduster",
+  "label": "立环脉动除尘机",
+  "version": "0.6.2",
+  "dimensionSource": "photo-proportional-display",
+  "notes": [
+    "模型节点按照片比例定位；真实设备和传感器由接口及绑定配置唯一匹配，不内置虚构编号或模拟监测值。",
+    "以两张实物照片核对真实铸造壳体、轴承座、肋板、机脚、电机和防护罩深度；所有参数仍为比例估计。",
+    "电机2点、三根减速机轴各两端共6点、泵头壳体1点，共9点。A为皮带侧，B为背侧。",
+    "Word 允许省略网罩；本轮保留照片可见的斜顶边框、菱形金属网和中间立柱，涂装沿用公司模型的青绿色。",
+    "电机、减速机和泵头壳体独立控制；前端使用带轮轴心、连续皮带纹理和九个锚点进行报警及传动展示。",
+    "按用户红框/箭头对应图，电机小轮端与另一端风罩对应；减速机大轮端与靠电机的大端盖对应，另两块端盖顺次在背侧。",
+    "2026-10-28最新箭头明确连接位置：轴从减速箱右侧尾端端面向外伸出，再连接轴端大圆体；此标注纠正先前按皮带侧Y轴理解的错误。模型采用Blender +X尾端出轴，三个背侧圆盖同构封闭。",
+    "本轮补建大带轮后方壳体圆形凸台、电机上方开放式弧形薄盖、后方带径向筋的大圆壳体，以及朝电机的箱体短端面法兰和中心凸帽。后圆壳体未配置旋转。",
+    "模型颜色与公司现有CTN1230L、磁选机及防尘泵保持一致：青绿色主体、钢灰传动部件、黑色皮带；不再采用黄色图标的涂装。",
+    "测点为模型比例定位；隐藏轴端和泵壳安装点仍待现场确认。",
+    "0.6.0按最新八项实拍对照联动调整箱长、轴端盖间距、分箱厚耳及侧向座；补左小座三紧固件横台、护盖裙边与连续平台；短端采用较小端盖，尾端联接粗短化。参数均为照片比例估计。"
+  ],
+  "asset": "ring-pulsating-deduster.glb",
+  "points": [
+    {
+      "key": "motor_de",
+      "label": "电机输出端",
+      "partKey": "motor",
+      "anchor": "Anchor_motor_de",
+      "localPosition": [
+        0.82,
+        -0.75,
+        0.68
+      ],
+      "coordinateSystem": "Blender XYZ, proportional units",
+      "positionSource": "photo-proportional",
+      "description": "依据电机两端轴承关系建立的比例节点，非实测安装坐标。",
+      "aliases": [
+        "电机驱动端",
+        "电机带轮侧"
+      ]
+    },
+    {
+      "key": "motor_nde",
+      "label": "电机非输出端",
+      "partKey": "motor",
+      "anchor": "Anchor_motor_nde",
+      "localPosition": [
+        0.82,
+        1.35,
+        0.68
+      ],
+      "coordinateSystem": "Blender XYZ, proportional units",
+      "positionSource": "photo-proportional",
+      "description": "依据电机两端轴承关系建立的比例节点，非实测安装坐标。",
+      "aliases": [
+        "电机非驱动端",
+        "电机风罩侧"
+      ]
+    },
+    {
+      "key": "gearbox_shaft_1_a",
+      "label": "减速机输入轴皮带侧",
+      "partKey": "gearbox",
+      "anchor": "Anchor_gearbox_shaft_1_a",
+      "localPosition": [
+        5.72,
+        -0.77,
+        1.2
+      ],
+      "coordinateSystem": "Blender XYZ, proportional units",
+      "positionSource": "opposite-end-inferred",
+      "description": "前后成对归属同一轴；位置按照片比例估计，背侧使用同构封闭圆盖。",
+      "aliases": [
+        "减速机轴1A端",
+        "减速机轴1皮带侧"
+      ]
+    },
+    {
+      "key": "gearbox_shaft_1_b",
+      "label": "减速机输入轴背侧",
+      "partKey": "gearbox",
+      "anchor": "Anchor_gearbox_shaft_1_b",
+      "localPosition": [
+        5.72,
+        1.3800000000000001,
+        1.2
+      ],
+      "coordinateSystem": "Blender XYZ, proportional units",
+      "positionSource": "rear-cover-photo",
+      "description": "前后成对归属同一轴；位置按照片比例估计，背侧使用同构封闭圆盖。",
+      "aliases": [
+        "减速机轴1B端",
+        "减速机轴1背侧"
+      ]
+    },
+    {
+      "key": "gearbox_shaft_2_a",
+      "label": "减速机中间轴皮带侧",
+      "partKey": "gearbox",
+      "anchor": "Anchor_gearbox_shaft_2_a",
+      "localPosition": [
+        4.55,
+        -0.895,
+        1.14
+      ],
+      "coordinateSystem": "Blender XYZ, proportional units",
+      "positionSource": "front-auxiliary-seat-photo",
+      "description": "05按照片移至大带轮左侧圆座；05与06配对及中间轴命名待核准，不能视为已确认共轴。",
+      "aliases": [
+        "减速机轴2A端",
+        "减速机轴2皮带侧"
+      ]
+    },
+    {
+      "key": "gearbox_shaft_2_b",
+      "label": "减速机中间轴背侧",
+      "partKey": "gearbox",
+      "anchor": "Anchor_gearbox_shaft_2_b",
+      "localPosition": [
+        6.95,
+        1.3800000000000001,
+        1.13
+      ],
+      "coordinateSystem": "Blender XYZ, proportional units",
+      "positionSource": "rear-cover-photo",
+      "description": "05按照片移至大带轮左侧圆座；05与06配对及中间轴命名待核准，不能视为已确认共轴。",
+      "aliases": [
+        "减速机轴2B端",
+        "减速机轴2背侧"
+      ]
+    },
+    {
+      "key": "gearbox_shaft_3_a",
+      "label": "减速机输出轴皮带侧",
+      "partKey": "gearbox",
+      "anchor": "Anchor_gearbox_shaft_3_a",
+      "localPosition": [
+        8.1,
+        -0.77,
+        1.08
+      ],
+      "coordinateSystem": "Blender XYZ, proportional units",
+      "positionSource": "opposite-end-inferred",
+      "description": "前后成对归属同一轴；位置按照片比例估计，背侧使用同构封闭圆盖。",
+      "aliases": [
+        "减速机轴3A端",
+        "减速机轴3皮带侧"
+      ]
+    },
+    {
+      "key": "gearbox_shaft_3_b",
+      "label": "减速机输出轴背侧",
+      "partKey": "gearbox",
+      "anchor": "Anchor_gearbox_shaft_3_b",
+      "localPosition": [
+        8.1,
+        1.3800000000000001,
+        1.08
+      ],
+      "coordinateSystem": "Blender XYZ, proportional units",
+      "positionSource": "rear-cover-photo",
+      "description": "前后成对归属同一轴；位置按照片比例估计，背侧使用同构封闭圆盖。",
+      "aliases": [
+        "减速机轴3B端",
+        "减速机轴3背侧"
+      ]
+    },
+    {
+      "key": "pump_housing",
+      "label": "泵头壳体",
+      "partKey": "pump",
+      "anchor": "Anchor_pump_housing",
+      "localPosition": [
+        10.1,
+        0.91,
+        1.7200000000000002
+      ],
+      "coordinateSystem": "Blender XYZ, proportional units",
+      "positionSource": "location-unconfirmed",
+      "description": "按实拍补建大圆形壳体后的表面示意节点；传感器实际安装位置仍待现场核对。",
+      "aliases": [
+        "泵头壳体测点"
+      ]
+    }
+  ],
+  "parts": {
+    "motor": "Motor",
+    "gearbox": "Gearbox",
+    "guard": "BeltGuard",
+    "pump": "PumpHousing"
+  },
+  "motion": {
+    "motorPivot": "PulleyMotor",
+    "drivenPivot": "PulleyGearbox",
+    "belt": "DriveBelt",
+    "axis": [
+      0,
+      0,
+      -1
+    ],
+    "radiusRatio": 0.4363636363636363,
+    "radiansPerSecond": 2.2,
+    "beltUvPerRadian": 0.576367027218693
+  },
+  "running": {
+    "source": "getLatestThreeAxisIndex.intensity",
+    "pointKeys": [
+      "motor_de",
+      "motor_nde"
+    ],
+    "startAbove": 0.5,
+    "unit": "mm/s"
+  },
+  "view": {
+    "defaultDirection": [
+      0.4592124819755554,
+      0.2079116851091385,
+      0.8636530637741089
+    ]
+  },
+  "appearance": {
+    "paint": "#18fefe",
+    "steel": "#c9c8ca",
+    "paintMetalness": 0.7,
+    "paintRoughness": 0.4,
+    "steelMetalness": 0.7,
+    "steelRoughness": 0.5,
+    "referenceViewers": [
+      "CTN1230L",
+      "CiXuanJi",
+      "DustRemovalPumps"
+    ]
+  }
+}

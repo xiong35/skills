@@ -1,0 +1,14 @@
+{
+  "source": "原Word实拍、2026-10-27正反面对照及2026-10-28最新尾端出轴箭头；最新箭头优先",
+  "correspondences": [
+    { "front": "左侧小皮带轮", "opposite": "电机风罩及非驱动端", "model": ["PulleyMotor", "Motor", "Anchor_motor_de", "Anchor_motor_nde"] },
+    { "front": "小轮后方白灰色主体", "opposite": "电机主体及散热筋", "model": ["Motor"] },
+    { "front": "右侧大皮带轮及其后方减速机", "opposite": "减速机三个圆端盖：靠电机最大，其后两块较小", "model": ["PulleyGearbox", "GearboxCover_1", "GearboxCover_2", "GearboxCover_3"] },
+    { "front": "减速箱右端/尾端伸出的轴及联轴器", "opposite": "轴端大圆体；从背侧观察出现在减速箱另一端", "model": ["OutputCoupling", "PumpHousing", "RearCircularHousing"], "directionConfirmedByUser": "2026-10-28最新箭头明确从箱体尾端端面向外伸轴，再接圆体；模型为Blender +X，替代此前错误的Y轴解释" },
+    { "front": "大带轮后壳体露出的圆形凸台/圆弧", "model": ["FrontCastShoulders"] },
+    { "front": "电机上方开放式薄弧盖", "model": ["MotorCanopy"] },
+    { "front": "靠电机的箱体短端面凸出筒座及带筋法兰", "model": ["GearboxMotorSideFlange"], "axis": "Blender -X；与尾端输出连接为不同部位" }
+  ],
+  "interpretation": "按部件及轴线对应建立真实空间关系；不把照片在屏幕上的左右位置直接当作三维世界坐标。正反面分别表达，不把三个圆端盖复制到皮带面。",
+  "limits": ["尺寸、轴间距和测点坐标仍为照片比例估计。", "大圆体按照片可见轮缘、轮毂、背板和径向筋拟合；未确认其内部结构、精确筋数及传感器实测安装位置，不推断其真实转速。"]
+}

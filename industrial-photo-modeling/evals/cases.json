@@ -1,0 +1,20 @@
+{
+  "purpose": "人工或独立 Agent 的选择与行为回放资料；不是自动模型评测器。选择时仅提供候选 metadata 和 prompt，expected 保留在评分侧。",
+  "selection": [
+    {"id": "new-photo", "prompt": "用这两张风机照片制作可编辑的 Blender 模型和 GLB，先核对正反面，不用除尘机的几何。", "expected": true},
+    {"id": "geometry-correction", "prompt": "这台设备的出轴朝向我已重新标注，按新图修正模型并重新渲染；暂时不要改前端。", "expected": true},
+    {"id": "drawing", "prompt": "根据这份料仓图纸制作三维模型，按图纸尺寸与坐标交付，不需要监测动画。", "expected": true},
+    {"id": "integration", "prompt": "把已完成的泵 GLB 接入现有设备详情，保留本项目材质和卡片操作，传感器 ID 等现场确认。", "expected": true},
+    {"id": "plan-only", "prompt": "设备照片还没发，先说清楚照片建模需要哪些资料和步骤，现在不生成文件。", "expected": true},
+    {"id": "cutout", "prompt": "只给这张设备 PNG 去背景，保留轮廓和透明通道，不制作三维模型。", "expected": false},
+    {"id": "business-review", "prompt": "Review 这个 Vue 表单的权限和分页逻辑，不涉及三维设备。", "expected": false},
+    {"id": "skill-authoring", "prompt": "帮我设计一个新的通用 Blender Skill，当前只制作技能，不执行建模。", "expected": false},
+    {"id": "cad-learning", "prompt": "给我安排 CAD 电气制图的学习计划，现在没有建模任务。", "expected": false}
+  ],
+  "behavior": [
+    {"id": "accepted-deduster-rebuild", "input": "使用包内已验收 0.6.2 源文件，在全新隔离目录重建立环脉动除尘机；不复制旧 GLB 或读取业务生成器。评估侧另持现用 GLB 作基准。", "verify": ["解压后仅凭完整 Skill 与已有 Blender 生成 blend、GLB、九点清单和渲染", "生成日志与实际导入结果可追溯", "评估侧比较全部几何数据、材质、层级、纹理、锚点和多视角效果", "已有输出或源快照被改动时拒绝覆盖并非零退出", "清楚区别配方复现、盲测照片建模与业务运行时验证"]},
+    {"id": "photo-analysis", "input": "两张同一设备的现场照片；仅分析，不改任何模型。", "verify": ["实际查看图片并建立跨视角对应", "指出未知尺寸和遮挡", "不生成模型或改业务文件", "不把案例参数当成新设备要求"]},
+    {"id": "independent-geometry", "input": "明确标记为技术验证的另一种结构描述和尺寸；只在隔离目录生成源工程、GLB、渲染和自定义契约。", "verify": ["使用当前已安装工具实际生成与回读", "契约按输入结构确定，不继承案例数量或颜色", "不改生产资源或编造照片相似度", "缺少材料或工具时明确实际未完成项"]},
+    {"id": "runtime-contract", "input": "现有项目及其真实监测契约；仅制定接入和验证方案。", "verify": ["节点、显示位置和真实身份分离", "重用公共交互和原有提示边界", "独立采样与接收时间", "按当前机构选择运动与恢复验证", "未联调项不宣称生产通过"]}
+  ]
+}
